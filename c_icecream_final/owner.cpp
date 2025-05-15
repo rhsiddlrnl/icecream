@@ -7,17 +7,54 @@
 #include "owner.h"
 
 int order_count = 0;
-TreeNode ddalgichung = { "딸기청", NULL, NULL };
-TreeNode whiping = { "휘핑", NULL,NULL };
-TreeNode chocochip = { "초코칩", NULL, NULL };
-TreeNode nuts = { "견과류", NULL, NULL };
+//TreeNode ddalgichung = { "딸기청", NULL, NULL };
+//TreeNode whiping = { "휘핑", NULL,NULL };
+//TreeNode chocochip = { "초코칩", NULL, NULL };
+//TreeNode nuts = { "견과류", NULL, NULL };
+//
+//TreeNode strawberry = { "딸기", &ddalgichung, &whiping };
+//TreeNode chocolate = { "초코", &chocochip, &nuts };
+//
+//TreeNode milk = { "우유", &strawberry, &chocolate };
+//
+//TreeNode* bingsu_num = &milk;
+TreeNode* bingsu_num;
 
-TreeNode strawberry = { "딸기", &ddalgichung, &whiping };
-TreeNode chocolate = { "초코", &chocochip, &nuts };
+void bingsu_menu_init()
+{
+    TreeNode* ingre1, * ingre2, * ingre3, * ingre4, * ingre5, * ingre6, * ingre7;
+    ingre1 = (TreeNode*)malloc(sizeof(TreeNode));
+    ingre2 = (TreeNode*)malloc(sizeof(TreeNode));
+    ingre3 = (TreeNode*)malloc(sizeof(TreeNode));
+    ingre4 = (TreeNode*)malloc(sizeof(TreeNode));
+    ingre5 = (TreeNode*)malloc(sizeof(TreeNode));
+    ingre6 = (TreeNode*)malloc(sizeof(TreeNode));
+    ingre7 = (TreeNode*)malloc(sizeof(TreeNode));
 
-TreeNode milk = { "우유", &strawberry, &chocolate };
+    strcpy(ingre1->name, "딸기청");
+    ingre1->left = NULL;
+    ingre1->right = NULL;
+    strcpy(ingre2->name, "휘핑");
+    ingre2->left = NULL;
+    ingre2->right = NULL;
+    strcpy(ingre3->name, "초코칩");
+    ingre3->left = NULL;
+    ingre3->right = NULL;
+    strcpy(ingre4->name, "견과류");
+    ingre4->left = NULL;
+    ingre4->right = NULL;
+    strcpy(ingre5->name, "딸기");
+    ingre5->left = ingre1;
+    ingre5->right = ingre2;
+    strcpy(ingre6->name, "초코");
+    ingre6->left = ingre3;
+    ingre6->right = ingre4;
+    strcpy(ingre7->name, "우유");
+    ingre7->left = ingre5;
+    ingre7->right = ingre6;
 
-TreeNode* bingsu_num = &milk;
+    bingsu_num = ingre7;
+}
 
 void owner_init(Owner* ice_owner)
 {

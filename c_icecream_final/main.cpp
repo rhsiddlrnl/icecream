@@ -12,6 +12,7 @@ int main()
     Rider rider;
     rider_init(&rider);
 
+    bingsu_menu_init();
 
     for (int i = 0; i < MAX_CUSTOMER_SIZE + 1; i++) {
         Sleep(1000);

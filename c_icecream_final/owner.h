@@ -13,6 +13,7 @@ typedef struct owner {
     ListNode* tail;
 } Owner;
 
+void bingsu_menu_init();
 void owner_init(Owner* ice_owner);
 void cal_sales(Owner* ice_owner, int cupsize, int penalty);
 int get_order(Owner* ice_owner);

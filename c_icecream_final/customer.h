@@ -3,8 +3,8 @@
 
 #define MAX_CUPSIZE 5
 #define MAX_CUSTOMER_SIZE 5
-#define MAX_COOK_BINGSU 3
-#define NUM_OF_INGREDIENT 7
+#define MAX_COOK_BINGSU 3       //만드는 방법 종류 ex)베이스 맛이 강하게, 균형잡힌 맛으로, 깊은 여운이 나게
+#define NUM_OF_INGREDIENT 7     //트리에 들어가는 재료의 수
 
 typedef struct {
     int* icecream_number;
@@ -20,8 +20,8 @@ typedef struct customer {
     int onlyhome;
     int ingre_count;
     int bingsu_menu;
-    char order_bingsu[NUM_OF_INGREDIENT][100];
-    char bingsu_make[NUM_OF_INGREDIENT][100];
+    char order_bingsu[NUM_OF_INGREDIENT][100];      //주문을 저장하는 변수
+    char bingsu_make[NUM_OF_INGREDIENT][100];       //주문대로 만든 빙수를 저장하는 변수       2개 비교해서 점수
     Stack* icecream_cup;
 } Customer;
 
